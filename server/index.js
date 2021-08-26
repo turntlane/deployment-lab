@@ -14,6 +14,8 @@ app.get('/', (req, res) => {
 
 app.use('/css', express.static(path.join(__dirname, '../style.css')))
 
+app.use('/img', express.static(path.join(__dirname, '../images/dave-hoefler-lsoogGC_5dg-unsplash.jpg')))
+
 
 
 const port = process.env.PORT || 4005;
