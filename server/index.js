@@ -7,9 +7,14 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'));
 })
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../style.css'));
-})
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../style.css'));
+// })
+
+
+app.use('/css', express.static(path.join(__dirname, '../style.css')))
+
+
 
 const port = process.env.PORT || 4005;
 
